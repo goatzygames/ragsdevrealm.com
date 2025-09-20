@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Rag Dev Realm — Portfolio</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="assets/favicon.png" />
+</head>
+<body>
+<header class="site-header">
+<div class="container header-inner">
+<a class="brand" href="index.html">
+<div class="logo-round" aria-hidden>
+<img src="pics/rdr_logo.png" alt="RDR logo"/>
+</div>
+<div class="brand-text">
+<h1>Rag Dev Realm</h1>
+<p class="muted">Rag — Indie Game Developer · Unreal Engine 5</p>
+</div>
+</a>
+
+
+<nav class="main-nav" aria-label="Main navigation">
+<a href="index.html" class="active">Home</a>
+<a href="about.html">About</a>
+<a href="projects.html">Projects</a>
+<a href="contact.html">Contact</a>
+</nav>
+
+
+<button id="nav-toggle" class="nav-toggle" aria-label="Open menu">☰</button>
+</div>
+</header>
+
+<br><br><br><br>
+<main>
+<!-- HERO -->
+<section class="hero">
+<div class="hero-inner container">
+<div class="hero-badge" aria-hidden>
+<img src="pics/rdr_logo.png" alt="RDR"/>
+</div>
+<div class="hero-copy">
+<h2>Hi, I’m <span class="accent">Rag</span> — gamer turned indie game developer.</h2>
+<p class="lead">I’ve spent the last two years mastering <strong>Unreal Engine</strong>, creating and releasing two indie games. Now, I share my journey — the highs, the lows, and everything in between — as I chase the dream of building worlds of my own.</p>
+
+
+<div class="hero-cta">
+<a class="btn primary" href="projects.html">View Projects</a>
+<a class="btn ghost" href="about.html">About Me</a>
+</div>
+
+
+<div class="hero-meta">
+<span>Future Studio: <strong>Ghostlab Studios</strong></span>
+<span>Tools: <strong>Unreal Engine 5 · C++</strong></span>
+</div>
+</div>
+
+
+<div class="hero-card">
+<div class="card-glow"></div>
+<div class="card-inner">
+<h3>Mission</h3>
+<p>This is my open diary of indie game development — honest insights, behind-the-scenes, and the real work behind creating memorable gameplay.</p>
+<a class="btn small" href="about.html">Read mission</a>
+</div>
+</div>
+</div>
+
+
+<svg class="hero-wave" viewBox="0 0 1200 100" preserveAspectRatio="none">
+<path d="M0,50 C300,150 900,0 1200,50 L1200 100 L0 100 Z"></path>
+</svg>
+</section>
+
+
+<!-- QUICK BLURB / FEATURES -->
+<section class="features container">
+<div class="feature">
+<h4>Games</h4>
+<p>Two released indie titles made in UE5 with emphasis on atmosphere and polish.</p>
+</div>
+<div class="feature">
+<h4>Development Logs</h4>
+<p>Behind-the-scenes posts, dev notes, and technical breakdowns.</p>
+</div>
+<div class="feature">
+<h4>Tools & Tech</h4>
+<p>C++, Blueprints, level sequencer, audio design, and optimization.</p>
+</div>
+</section>
+
+
+<!-- LATEST PROJECT PREVIEW -->
+<section class="preview container">
+<div class="preview-left">
+<h3>Latest release: <span class="accent">The Last Customer</span></h3>
+<p>Atmospheric narrative puzzler built with UE5. Click below to see case study and postmortem.</p>
+<div class="preview-cta">
+<a class="btn" href="project-sample.html">Case Study</a>
+<a class="btn ghost" href="projects.html">All projects</a>
+</div>
+</div>
+<div class="preview-right" aria-hidden>
+<div class="mockup"></div>
+</div>
+</section>
+
+<!-- MISSION / VISION -->
+<section class="mission container">
+<h3>Why this exists</h3>
+<p>This channel is my open diary of indie game development. You’ll find honest insights, behind-the-scenes looks at mechanics, and the real challenges and triumphs of an indie dev. My mission is to entertain, inspire, and grow a community of people who love games as much as I do.</p>
+<p class="muted">The bigger picture: launch <strong>Ghostlab Studios</strong> and keep making meaningful games.</p>
+</section>
+
+
+<!-- CALL TO ACTION FOOTER SECTION -->
+<section class="cta container">
+<h3>Want to follow the journey?</h3>
+<p>Subscribe for updates, devlogs, and early builds.</p>
+<form id="subscribe-form" class="subscribe-form" action="#" onsubmit="return subscribe(event)">
+<input type="email" id="email" placeholder="Your email" required />
+<button class="btn primary">Subscribe</button>
+</form>
+</section>
+
+
+</main>
+
+<footer class="site-footer">
+<div class="container footer-inner">
+<div>© <span id="year" style="text-align: center"></span> Rag Dev Realm — Built with Unreal Engine 5 &amp; caffeine.</div>
+</div>
+</footer>
+
+
+<script src="main.js"></script>
+</body>
+</html>

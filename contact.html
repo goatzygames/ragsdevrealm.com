@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Contact — Rag Dev Realm</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header small">
+<div class="container header-inner">
+<a class="brand" href="index.html"><div class="logo-round"><img src="pics/rdr_logo.png" alt="RDR"/></div><div class="brand-text"><h1>Rag Dev Realm</h1><p class="muted">Contact</p></div></a>
+<nav class="main-nav"><a href="index.html">Home</a><a href="about.html">About</a><a href="projects.html">Projects</a><a href="contact.html" class="active">Contact</a></nav>
+</div>
+</header>
+
+<br><br><br><br>
+<main class="container contact-page">
+<h2>Get in touch</h2>
+<p>If you'd like to collaborate, commission, or chat about game dev, drop a message below.</p>
+
+
+<form class="contact-form" action="#" onsubmit="return contactSubmit(event)">
+<label>Name<input type="text" id="c-name" required></label>
+<label>Email<input type="email" id="c-email" required></label>
+<label>Message<textarea id="c-message" rows="6" required></textarea></label>
+<button class="btn primary">Send message</button>
+</form>
+</main>
+
+
+<footer class="site-footer small"><div class="container footer-inner">© <span id="year-contact"></span> Rag Dev Realm</div></footer>
+<script src="main.js"></script>
+</body>
+</html>

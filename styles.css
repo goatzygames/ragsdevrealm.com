@@ -1,0 +1,316 @@
+:root{
+--bg:#0f1720;
+--card:#0d2338;
+--muted:#9aa6b2;
+--accent-1:#22b3ff;
+--accent-2:#7b3bff;
+--glass:rgba(255,255,255,0.03);
+--radius:14px;
+--max-width:1100px;
+--trans:all 320ms cubic-bezier(.2,.9,.2,1);
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial;font-size:16px;background:linear-gradient(180deg,#0b1220 0%, #0f1726 100%);color:#e7f0ff;}
+.container{max-width:var(--max-width);margin:0 auto;padding:30px}
+.site-header{position:sticky;top:0;backdrop-filter:blur(6px);background:linear-gradient(180deg, rgba(10,14,20,0.5), rgba(10,14,20,0.25));border-bottom:1px solid rgba(255,255,255,0.03);z-index:30}
+.header-inner{display:flex;align-items:center;gap:16px;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit}
+.logo-round{width:54px;height:54px;border-radius:999px;overflow:hidden;box-shadow:0 6px 24px rgba(118,72,255,0.12);}
+.logo-round img{width:100%;height:100%;object-fit:cover}
+.brand-text h1{font-size:18px;margin:0}
+.brand-text .muted{color:var(--muted);font-size:13px;margin:0}
+.main-nav a{color:var(--muted);text-decoration:none;margin-left:18px}
+.main-nav a.active{color:#fff}
+.nav-toggle{display:none}
+
+
+/* HERO */
+.hero{position:relative;padding:60px 0 20px;overflow:visible}
+.hero-inner{display:grid;grid-template-columns:1fr 380px;gap:28px;align-items:center}
+.hero-badge img{width:180px}
+.hero-copy h2{font-size:28px;margin:0 0 12px}
+.lead{color:var(--muted);line-height:1.5}
+.hero-cta{margin-top:18px}
+.btn{display:inline-block;padding:10px 16px;border-radius:10px;text-decoration:none;font-weight:600;border:1px solid transparent;transition:var(--trans);background:transparent;color:inherit}
+.btn.small{padding:8px 12px;font-size:14px}
+.btn.primary{background:linear-gradient(90deg,var(--accent-1),var(--accent-2));box-shadow:0 8px 30px rgba(123,59,255,0.12);color:#02132a}
+.btn.ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--muted)}
+.hero-card{position:relative;background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:22px;border-radius:14px;box-shadow:0 12px 50px rgba(11,18,30,0.6)}
+.card-glow{position:absolute;inset:-2px;background:radial-gradient(circle at 20% 10%, rgba(34,179,255,0.12), transparent 20%, rgba(123,59,255,0.07) 60%);filter:blur(10px);border-radius:inherit}
+.card-inner{position:relative}
+.hero-wave{display:block;width:100%;height:70px}
+
+
+.features{display:flex;gap:18px;padding:8px 30px}
+.feature{flex:1;background:var(--glass);padding:18px;border-radius:12px;text-align:center}
+.feature h4{margin:0 0 8px}
+
+
+.preview{display:flex;gap:24px;align-items:center;padding:40px 30px}
+.preview-right .mockup{width:320px;height:180px;border-radius:12px;background:linear-gradient(180deg,#0b2a45,#132b4b);box-shadow:inset 0 0 30px rgba(0,0,0,0.4)}
+.mission{padding:40px 30px}
+.cta{background:linear-gradient(90deg, rgba(34,179,255,0.04), rgba(123,59,255,0.02));padding:30px;border-radius:12px;margin:30px 0}
+.subscribe-form{display:flex;gap:12px}
+.subscribe-form input{flex:1;padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit}
+
+
+.site-footer{padding:18px 0;border-top:1px solid rgba(255,255,255,0.03);color:var(--muted)}
+.footer-inner{display:flex;justify-content:space-between;align-items:center}
+
+
+/* Projects grid */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.project-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:16px;border-radius:12px;transition:transform 280ms ease, box-shadow 280ms ease}
+.project-card:focus,.project-card:hover{transform:translateY(-6px);box-shadow:0 18px 50px rgba(11,18,30,0.6)}
+.thumb{height:140px;border-radius:8px;background:linear-gradient(180deg, rgba(34,179,255,0.06), rgba(123,59,255,0.06))}
+
+/* responsive */
+@media (max-width:900px){
+.hero-inner{grid-template-columns:1fr}
+.header-inner{gap:8px}
+.nav-toggle{display:block}
+.main-nav{display:none}
+}
+
+
+/* micro-animations */
+@keyframes floaty{0%{transform:translateY(0)}50%{transform:translateY(-8px)}100%{transform:translateY(0)}}
+.logo-round{animation:floaty 6s ease-in-out infinite}
+
+
+/* accessibility focus */
+:focus{outline:2px solid rgba(34,179,255,0.18);outline-offset:3px}
+
+button:hover {
+	cursor: pointer;
+}
+
+.btn {
+  border-radius: 10px;
+  overflow: hidden; /* Ensures shadows/gradients don’t leak outside */
+}
+.btn.primary {
+  box-shadow: 0 8px 20px rgba(123, 59, 255, 0.12); /* slightly smaller blur */
+}
+.btn {
+  background-clip: padding-box;
+}
+.btn.primary {
+  position: relative;
+  color: #02132a;
+  border: none;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.btn.primary::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, var(--accent-1), var(--accent-2));
+  z-index: -1;
+  border-radius: inherit;
+}
+
+.gallery-slider {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.gallery-inner {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.gallery-inner img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.gallery-inner img.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.gallery-slider button.prev,
+.gallery-slider button.next {
+  background: var(--glass);
+  border: none;
+  padding: 10px 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: var(--accent-1);
+  font-weight: bold;
+  user-select: none;
+}
+
+.gallery-slider {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.gallery-main {
+  position: relative;
+  width: 100%;
+  max-width: 600px;
+  height: 300px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.gallery-main img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-main img.active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.gallery-thumbs {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.gallery-thumbs .thumb {
+  border: 2px solid transparent;
+  border-radius: 6px;
+  padding: 2px;
+  cursor: pointer;
+  background: var(--glass);
+  transition: border 0.2s;
+}
+
+.gallery-thumbs .thumb.active {
+  border-color: var(--accent-1);
+}
+
+.gallery-thumbs .thumb img {
+  display: block;
+  width: 60px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.site-header {
+  position: fixed;       /* Fix the header to the viewport */
+  top: 0;                /* Stick to the top */
+  left: 0;               /* Ensure it starts from the left edge */
+  width: 100%;           /* Make it span the full screen width */
+  backdrop-filter: blur(6px);
+  background: linear-gradient(180deg, rgba(10,14,20,0.5), rgba(10,14,20,0.25));
+  border-bottom: 1px solid rgba(255,255,255,0.03);
+  z-index: 9999;         /* Keep it above all other elements */
+}
+:focus,
+button:hover,
+.btn:hover,
+a:hover {
+  outline: 2px solid rgba(34,179,255,0.18);
+  outline-offset: 3px;
+}
+
+@media (max-width:900px){
+  .container {
+    padding: 15px;
+  }
+  
+  .grid {
+    grid-template-columns: 1fr; /* single column on small screens */
+    gap: 12px;
+  }
+  
+  .features {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
+@media (max-width:900px){
+  .hero-inner {
+    grid-template-columns: 1fr; /* stack hero content vertically */
+    gap: 16px;
+    text-align: center;
+  }
+  
+  .hero-badge img {
+    width: 140px; /* smaller image on mobile */
+    margin: 0 auto;
+  }
+  
+  .hero-copy h2 {
+    font-size: 22px;
+  }
+  
+  .hero-copy .lead {
+    font-size: 14px;
+  }
+}
+
+@media (max-width:600px){
+  .gallery-main {
+    max-width: 100%;
+    height: 200px;
+  }
+  
+  .gallery-thumbs .thumb img {
+    width: 40px;
+    height: 30px;
+  }
+  
+  .gallery-thumbs {
+    gap: 6px;
+  }
+}
+
+@media (max-width:600px){
+  .btn {
+    padding: 8px 12px;
+    font-size: 14px;
+  }
+  
+  .project-card {
+    padding: 12px;
+  }
+  
+  .lead, p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width:500px){
+  .footer-inner {
+    flex-direction: column;
+    gap: 8px;
+    text-align: center;
+  }
+}
