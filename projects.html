@@ -3,8 +3,38 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Projects — Rag Dev Realm</title>
+  <title>RagsDevRealm</title>
+  <meta name="title" content="Rags Dev Realm">
+  <meta name="description" content="Rag — Indie Game Developer sharing Unreal Engine 5 projects, devlogs, and insights. Follow the journey of solo game development.">
+
+  <!-- SEO keywords -->
+  <meta name="keywords" content="indie game developer, Unreal Engine 5, C++, game dev blog, solo dev, Rag Dev Realm, Ghostlab Studios, devlogs, portfolio">
+
+  <!-- Author -->
+  <meta name="author" content="Rag (Rag Dev Realm)">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#1a1a1a">
+
+  <!-- Open Graph / Facebook / LinkedIn -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ragsdevrealm.com/">
+  <meta property="og:title" content="Rag Dev Realm — Portfolio">
+  <meta property="og:description" content="Indie game developer — Unreal Engine 5 projects, devlogs, and insights.">
+  <meta property="og:image" content="https://ragsdevrealm.com/pics/rdr_logo.png">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://ragsdevrealm.com/">
+  <meta name="twitter:title" content="Rag Dev Realm — Portfolio">
+  <meta name="twitter:description" content="Indie game developer — Unreal Engine 5 projects, devlogs, and insights.">
+  <meta name="twitter:image" content="https://ragsdevrealm.com/pics/rdr_logo.png">
+
+  <!-- Favicons -->
+  <link rel="icon" href="pics/rdr_logo.png" type="image/png">
+  <link rel="apple-touch-icon" href="pics/rdr_logo.png">
+  <link rel="manifest" href="site.webmanifest">
 <link rel="stylesheet" href="styles.css">
+<link rel="icon" href="pics/rdr_logo.png" />
 </head>
 <body>
 <header class="site-header small">
@@ -44,7 +74,15 @@
 </main>
 
 
-<footer class="site-footer small"><div class="container footer-inner">© <span id="year-projects"></span> Rag Dev Realm</div></footer>
+<footer class="site-footer">
+  <div class="container footer-inner" style="justify-content: center;">
+    <div>© <span id="year"></span> Rag Dev Realm — Built with Unreal Engine 5 &amp; caffeine.</div>
+  </div>
+</footer>
+
+<script>
+document.getElementById("year").textContent = new Date().getFullYear();
+</script>
 <script src="main.js"></script>
 </body>
 </html>

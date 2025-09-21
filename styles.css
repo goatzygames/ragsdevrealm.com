@@ -314,3 +314,324 @@ a:hover {
     text-align: center;
   }
 }
+
+.founder-section {
+  background: var(--card);
+  padding: 40px 20px;
+  border-radius: var(--radius);
+  margin: 30px 0;
+  box-shadow: 0 8px 30px rgba(11,18,30,0.5);
+}
+
+.founder-inner {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.founder-image {
+  flex: 0 0 180px;
+  border-radius: 999px;
+  overflow: hidden;
+  box-shadow: 0 6px 24px rgba(118,72,255,0.12);
+}
+
+.founder-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.founder-text {
+  flex: 1;
+  color: #e7f0ff;
+}
+
+.founder-text h2 {
+  margin: 0 0 8px;
+  font-size: 22px;
+}
+
+.founder-text p {
+  margin: 0;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  .founder-inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .founder-image {
+    flex: 0 0 140px;
+    margin-bottom: 16px;
+  }
+}
+
+#parent{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+#child{
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    padding-right: 17px; /* Increase/decrease this value for cross-browser compatibility */
+    box-sizing: content-box; /* So the width will be 100% + 17px */
+}
+
+/* Card Grid */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+  gap: 22px;
+}
+
+/* Professional Card */
+.pro-card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.015));
+  border-radius: var(--radius);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.45);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 240ms ease, box-shadow 240ms ease;
+}
+.pro-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+}
+
+/* Thumbnail */
+.pro-thumb {
+  width: 100%;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+.pro-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 280ms ease;
+}
+.pro-card:hover .pro-thumb img {
+  transform: scale(1.05);
+}
+
+/* Body */
+.pro-body {
+  padding: 18px 20px;
+  flex: 1;
+}
+.pro-body h4 {
+  margin: 0 0 8px;
+  font-size: 18px;
+}
+.pro-body p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Footer */
+.pro-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+.pro-footer .meta {
+  font-size: 13px;
+  color: var(--muted);
+}
+
+/* General Post Card */
+.post-card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.025), rgba(255,255,255,0.01));
+  border-radius: var(--radius);
+  padding: 20px 24px;
+  margin-bottom: 24px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.35);
+  transition: transform 240ms ease, box-shadow 240ms ease;
+}
+.post-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 36px rgba(0,0,0,0.5);
+}
+
+.post-card h1,
+.post-card h2 {
+  margin-top: 0;
+}
+
+/* Post Images */
+.post-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 12px;
+}
+
+/* Highlighted Quote Card */
+.post-card.highlight {
+  background: linear-gradient(90deg, rgba(34,179,255,0.08), rgba(123,59,255,0.08));
+  font-size: 18px;
+  font-style: italic;
+  border-left: 4px solid var(--accent-1);
+}
+.post-card.highlight blockquote {
+  margin: 0;
+}
+
+/* Code Snippet Card */
+.post-card.code {
+  background: #0d1b2a;
+  padding: 16px;
+  overflow-x: auto;
+}
+.post-card.code pre {
+  margin: 0;
+  font-family: Consolas, monospace;
+  font-size: 14px;
+  color: #e0e0e0;
+}
+
+.latest-posts {
+  margin: 60px auto;
+  text-align: center;
+}
+
+.section-header h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.3em;
+}
+
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 24px;
+  margin-top: 30px;
+}
+
+.post-card {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.post-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+}
+
+.post-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  height: 100%;
+}
+
+.post-thumb {
+  height: 160px;
+  background-size: cover;
+  background-position: center;
+}
+
+.post-content {
+  padding: 16px;
+  text-align: left;
+}
+
+.post-content h3 {
+  margin: 0 0 8px;
+  font-size: 1.2rem;
+}
+
+.posts-footer {
+  margin-top: 30px;
+}
+
+.container.founder-inner.pro-card {
+  box-shadow: none !important;
+}
+
+.founder-inner h3 {
+  margin-bottom: 16px;
+  color: #e7f0ff;
+  font-size: 20px;
+}
+
+/* Card Grid */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+  gap: 22px;
+}
+
+/* Professional Card */
+.pro-card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.015));
+  border-radius: var(--radius);
+  box-shadow: 0 12px 40px rgba(0,0,0,0.45);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 240ms ease, box-shadow 240ms ease;
+}
+.pro-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+}
+
+/* Thumbnail */
+.pro-thumb {
+  width: 100%;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+}
+.pro-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 280ms ease;
+}
+.pro-card:hover .pro-thumb img {
+  transform: scale(1.05);
+}
+
+/* Body */
+.pro-body {
+  padding: 18px 20px;
+  flex: 1;
+}
+.pro-body h4 {
+  margin: 0 0 8px;
+  font-size: 18px;
+}
+.pro-body p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* Footer */
+.pro-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 20px;
+  border-top: 1px solid rgba(255,255,255,0.05);
+}
+.pro-footer .meta {
+  font-size: 13px;
+  color: var(--muted);
+}
