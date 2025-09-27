@@ -33,8 +33,8 @@
   <link rel="icon" href="pics/rdr_logo.png" type="image/png">
   <link rel="apple-touch-icon" href="pics/rdr_logo.png">
   <link rel="manifest" href="site.webmanifest">
-<link rel="stylesheet" href="styles.css">
-<link rel="icon" href="pics/rdr_logo.png" />
+<link rel="stylesheet" href="../styles.css">
+<link rel="icon" href="../pics/rdr_logo.png" />
 </head>
 <body>
 <header class="site-header">
@@ -62,46 +62,80 @@
 <button id="nav-toggle" class="nav-toggle" aria-label="Open menu">☰</button>
 </div>
 </header>
+<br><br>
+<main class="container" style="padding-top:100px; max-width:800px;">
+  <article class="post">
 
-<br><br><br><br>
-<main class="container projects-page">
-<h2>Selected Projects</h2>
-<div class="grid">
-<article class="project-card" tabindex="0">
-<div class="thumb"></div>
-<h4>The Last Customer</h4>
-<p>Atmospheric narrative puzzler — UE5 — solo project.</p>
-<a class="btn small" href="project-sample.html">Case Study</a>
-</article>
+    <!-- Post Header Card -->
+    <div class="post-card">
+      <h1 style="font-size: 2.5rem;">Isolation Game Update</h1>
+      <p class="muted">Published on <time datetime="2025-09-21">September 27, 2025</time> · by Rag</p>
+      <div class="post-image">
+        <img src="../pics/Skarmbild_2025-09-25_210819.png" alt="Post cover">
+      </div>
+    </div>
 
+    <!-- Section Card -->
+    <div class="post-card">
+      <h2>Update</h2>
+      <p>
+        Hey! Made some progress on my newest project, the Isolation Game, (name still unset) where you have to survive and face jurassic dangers. 
+      </p>
+	  <p>
+		I just implemented the first enemy of the game!
+	  </p>
+    </div>
+	
+	    <!-- Section Card -->
+    <div class="post-card">
+      <h2>About</h2>
+      <p>
+        The game is a survival game where you have to shoot at different dinosaurs, like you see on the picture
+      </p>
+    </div>
+	
 
-<article class="project-card" tabindex="0">
-<div class="thumb"></div>
-<h4>Backrooms Mode</h4>
-<p>Experimental level with procedural elements and tension-driven pacing.</p>
-<a class="btn small" href="#">Details</a>
-</article>
+    <!-- Quote / Highlight -->
+    <div class="post-card highlight" style="display:none;>
+      <blockquote>
+        
+      </blockquote>
+    </div>
 
+    <!-- Section Card with Image -->
+    <div class="post-card">
+      <h2>Technical Notes</h2>
+      <p>Break your content into sections with headings. This makes long posts easier to read.</p>
+      <img src="../pics/post2.jpg" alt="Gameplay capture">
+    </div>
 
-<article class="project-card" tabindex="0">
-<div class="thumb"></div>
-<h4>Unreleased Prototype</h4>
-<p>Platformer-meets-puzzle prototype exploring physics-driven interactions.</p>
-<a class="btn small" href="#">Details</a>
-</article>
-</div>
+    <!-- Code Example Card -->
+    <div class="post-card code" style="display:none;">
+      <pre><code>// Example C++ snippet
+void AMyActor::BeginPlay()
+{
+    Super::BeginPlay();
+    UE_LOG(LogTemp, Warning, TEXT("Hello World"));
+}
+</code></pre>
+    </div>
+
+    <!-- Back link -->
+    <div class="post-card" style="text-align:center;">
+      <a href="../index.html" class="btn ghost">← Back</a>
+    </div>
+
+  </article>
 </main>
 
 
 <footer class="site-footer">
-  <div class="container footer-inner" style="justify-content: center;">
+  <div class="container footer-inner">
     <div>© <span id="year"></span> Rag Dev Realm — Built with Unreal Engine 5 &amp; caffeine.</div>
   </div>
 </footer>
-
 <script>
 document.getElementById("year").textContent = new Date().getFullYear();
 </script>
-<script src="main.js"></script>
 </body>
 </html>

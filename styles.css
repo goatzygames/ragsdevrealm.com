@@ -635,3 +635,34 @@ a:hover {
   font-size: 13px;
   color: var(--muted);
 }
+
+.pro-card {
+  height: auto; /* natural height */
+  width: 100%;  /* grid controls width */
+}
+
+.pro-body {
+  padding: 18px 20px;
+  flex: 0;   /* or just remove flex entirely */
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 22px;
+  align-items: start;  /* prevents tall empty space */
+}
+
+.pro-card {
+  display: block;       /* instead of flex */
+  height: auto;         /* don't stretch */
+  width: 100%;
+}
+.pro-body {
+  flex: unset;          /* remove leftover flex rules */
+}
+
+.pro-thumb {
+  aspect-ratio: 4/3; /* shorter thumbnail */
+  max-height: 180px; /* optional hard cap */
+}

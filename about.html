@@ -38,10 +38,29 @@
 </head>
 <body>
 <!-- reuse header via copy/paste for static bundle -->
-<header class="site-header small">
+<header class="site-header">
 <div class="container header-inner">
-<a class="brand" href="index.html"><div class="logo-round"><img src="pics/rdr_logo.png" alt="RDR"/></div><div class="brand-text"><h1>Rags Dev Realm</h1><p class="muted">Rag — Indie Game Developer</p></div></a>
-<nav class="main-nav"><a href="index.html">Home</a><a href="about.html" class="active">About</a><a href="projects.html">Projects</a><a href="contact.html">Contact</a></nav>
+<a class="brand" href="index.html">
+<div class="logo-round" aria-hidden>
+<img src="pics/rdr_logo.png" alt="RDR logo"/>
+</div>
+<div class="brand-text">
+<h1>Rags Dev Realm</h1>
+<p class="muted">Rag — Indie Game Developer · Unreal Engine 5</p>
+</div>
+</a>
+
+
+<nav class="main-nav" aria-label="Main navigation">
+<a href="index.html" class="active">Home</a>
+<a href="about.html">About</a>
+<a href="projects.html">Projects</a>
+<a href="contact.html">Contact</a>
+<a href="https://vgen.co/yanesari/portfolio">Yanisari's Art Corner</a>
+</nav>
+
+
+<button id="nav-toggle" class="nav-toggle" aria-label="Open menu">☰</button>
 </div>
 </header>
 <br><br><br><br>
