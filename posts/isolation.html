@@ -41,7 +41,7 @@
 <div class="container header-inner">
 <a class="brand" href="index.html">
 <div class="logo-round" aria-hidden>
-<img src="pics/rdr_logo.png" alt="RDR logo"/>
+<img src="../pics/rdr_logo.png" alt="RDR logo"/>
 </div>
 <div class="brand-text">
 <h1>Rags Dev Realm</h1>
@@ -71,18 +71,20 @@
       <h1 style="font-size: 2.5rem;">Isolation Game Update</h1>
       <p class="muted">Published on <time datetime="2025-09-21">September 27, 2025</time> · by Rag</p>
       <div class="post-image">
-        <img src="../pics/Skarmbild_2025-09-25_210819.png" alt="Post cover">
-      </div>
+  <img id="switcher-img" src="../pics/Skarmbild_2025-09-25_210819.png" alt="Post cover">
+  <div class="switcher-controls">
+    <button onclick="prevImage()">←</button>
+    <button onclick="nextImage()">→</button>
+  </div>
+</div>
+
     </div>
 
     <!-- Section Card -->
     <div class="post-card">
       <h2>Update</h2>
       <p>
-        Hey! Made some progress on my newest project, the Isolation Game, (name still unset) where you have to survive and face jurassic dangers. 
-      </p>
-	  <p>
-		I just implemented the first enemy of the game!
+        After a long modelling session it was time to import the animals to the project and give them animations, behaivor and personalit
 	  </p>
     </div>
 	
@@ -137,5 +139,28 @@ void AMyActor::BeginPlay()
 <script>
 document.getElementById("year").textContent = new Date().getFullYear();
 </script>
+<script>
+const images = [
+  "../pics/Skarmbild_2025-09-25_210819.png",
+  "../pics/Skarmbild_2025-09-28_172908.png"
+];
+
+let currentIndex = 0;
+const imgEl = document.getElementById("switcher-img");
+
+function showImage(index) {
+  currentIndex = (index + images.length) % images.length; // wrap around
+  imgEl.src = images[currentIndex];
+}
+
+function nextImage() {
+  showImage(currentIndex + 1);
+}
+
+function prevImage() {
+  showImage(currentIndex - 1);
+}
+</script>
+
 </body>
 </html>
