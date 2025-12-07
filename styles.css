@@ -710,3 +710,10 @@ a:hover {
 html {
   scroll-behavior: smooth;
 }
+
+.centered-container {
+  display: flex;
+  justify-content: center; /* horizontal center */
+  align-items: center;     /* vertical center */
+}
+
